@@ -6,7 +6,7 @@ import Header from './components/Header';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Header />
+      <Header title="Shopping List"/>
       <StatusBar style="auto" />
     </View>
   );
