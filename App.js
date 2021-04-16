@@ -18,12 +18,19 @@ export default function App() {
     setItems(prevItems => {
       return prevItems.filter(item => item.id !== id)
     })
-  }
+  };
+
+  const addItem = (text) => {
+    console.log(text);
+    setItems(prevItems => {
+      return [{id: Math.random(), text}, ...prevItems]
+    })
+  };
 
   return (
     <View style={styles.container}>
       <Header title="Shopping List"/>
-      <AddItem />
+      <AddItem addItem={addItem}/>
       <FlatList
         data={items}
         renderItem={({item}) => <ListItem
