@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, View, Text } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import Header from './components/Header';
-import ListItem from './components/ListItem'
+import ListItem from './components/ListItem';
 
 export default function App() {
   const [items, setItems] = useState([
-    {id: 1, text: "milk"},
-    {id: 2, text: "eggs"},
-    {id: 3, text: "bread"},
-    {id: 4, text: "juice"}
+    {id: '1', text: "milk"},
+    {id: '2', text: "eggs"},
+    {id: '3', text: "bread"},
+    {id: '4', text: "juice"}
   ]);
 
   return (
@@ -17,7 +17,7 @@ export default function App() {
       <Header title="Shopping List"/>
       <FlatList
         data={items}
-        renderItem={({item}) => <ListItem item={item}></ListItem>}
+        renderItem={({item}) => <ListItem item={item} />}
         />
       <StatusBar style="auto" />
     </View>
