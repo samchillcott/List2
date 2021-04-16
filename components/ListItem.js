@@ -6,7 +6,8 @@ const ListItem = ({ item, deleteItem }) => {
     return (
         <TouchableOpacity style={styles.listItem}>
             <View style={styles.listItemView}>
-                <Text style={styles.listItemText}>{item.text}</Text>
+                <Text style={styles.listItemText}>{item.text}
+                </Text>
                 <Ionicons
                     name="md-close-circle"
                     size={32}
